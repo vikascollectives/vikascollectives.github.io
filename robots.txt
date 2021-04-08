@@ -1,0 +1,6 @@
+Sitemap: http://vikascollectives.com/sitemap.xml
+
+User-agent: *
+Allow: /
+
+# This file was generated on Thu, 08 Apr 2021 20:33:54 +0000
