@@ -345,7 +345,8 @@ ul.check li::before{content:"\266A";position:absolute;left:0;color:var(--saffron
   display:inline-flex;align-items:center;justify-content:center;
   width:38px;height:38px;border-radius:50%;
   border:1.5px solid rgba(217,169,78,.5);color:#C9CDE0;
-  transition:background .25s,color .25s,border-color .25s,transform .25s;
+  transition:background .25s,color .25s,border-color .25s,transform .25s,
+  target=_blank;
 }
 .social-icons a:hover,.social-icons a:focus-visible{
   background:linear-gradient(135deg,var(--brass),var(--saffron));
