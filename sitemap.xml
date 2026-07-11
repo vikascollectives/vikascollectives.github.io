@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>http://vikascollectives.com/</loc>
-  <lastmod>2021-03-26T20:43:26+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.vikascollectives.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.vikascollectives.com/live-saxophone-shows-delhi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.vikascollectives.com/saxophone-lessons.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.vikascollectives.com/about.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.vikascollectives.com/testimonials.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.vikascollectives.com/gallery.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.vikascollectives.com/contact.html</loc><priority>0.8</priority></url>
 </urlset>
