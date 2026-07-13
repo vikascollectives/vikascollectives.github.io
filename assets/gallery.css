@@ -1,0 +1,155 @@
+/* ============================================================
+   Vikas Collectives — Gallery Scroller (v9)
+   File: assets/gallery.css — loaded only on gallery.html,
+   after assets/style.css. Namespace: .gsx-
+   Card look and hover behaviour match the previous
+   .gallery-grid figures (square, overlay caption, 1.05 zoom).
+   ============================================================ */
+
+.gsx-wrap{
+  position:relative;
+  margin-top:2rem;
+}
+
+/* Soft edge fades hint that more photos exist off-screen.
+   Sections use the --tint background, so the fades match it. */
+.gsx-wrap::before,
+.gsx-wrap::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:22px;
+  width:42px;
+  z-index:2;
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+.gsx-wrap::before{
+  left:0;
+  background:linear-gradient(to right, var(--tint), rgba(242,239,230,0));
+}
+.gsx-wrap::after{
+  right:0;
+  background:linear-gradient(to left, var(--tint), rgba(242,239,230,0));
+}
+.gsx-wrap.gsx-at-start::before{ opacity:0; }
+.gsx-wrap.gsx-at-end::after{ opacity:0; }
+
+/* ---------- Track ---------- */
+.gsx-track{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x proximity;
+  padding:6px 4px 20px;
+  cursor:grab;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:var(--brass) var(--line);
+}
+.gsx-track.gsx-dragging{
+  cursor:grabbing;
+  scroll-snap-type:none;
+  user-select:none;
+}
+.gsx-track::-webkit-scrollbar{ height:6px; }
+.gsx-track::-webkit-scrollbar-track{
+  background:var(--line);
+  border-radius:var(--radius);
+}
+.gsx-track::-webkit-scrollbar-thumb{
+  background:var(--brass);
+  border-radius:var(--radius);
+}
+.gsx-track:focus-visible{
+  outline:2px solid var(--brass);
+  outline-offset:4px;
+  border-radius:var(--radius);
+}
+
+/* ---------- Cards — same look and hover as the old grid ---------- */
+.gsx-track figure{
+  flex:0 0 auto;
+  width:min(250px, 68vw);
+  margin:0;
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  scroll-snap-align:start;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  background:#fff;
+  transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.gsx-track figure:hover,
+.gsx-track figure:focus-within{
+  transform:translateY(-5px);
+  border-color:var(--gold-l);
+  box-shadow:0 12px 26px rgba(28,34,64,.18);
+  z-index:1;
+}
+.gsx-track img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+  -webkit-user-drag:none;
+  user-select:none;
+}
+.gsx-track figure:hover img,
+.gsx-track figure:focus-within img{
+  transform:scale(1.05);
+}
+.gsx-track figcaption{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  background:linear-gradient(transparent, rgba(28,34,64,.88));
+  color:#fff;
+  font-size:.82rem;
+  font-weight:600;
+  padding:22px 12px 10px;
+}
+
+/* ---------- Prev / Next buttons ---------- */
+.gsx-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-60%);
+  z-index:3;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid var(--brass);
+  background:var(--ivory);
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(28,34,64,.15);
+  transition:background .25s ease, color .25s ease, transform .25s ease;
+}
+.gsx-btn svg{ width:19px; height:19px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
+.gsx-btn:hover{
+  background:var(--brass);
+  color:var(--ivory);
+  transform:translateY(-60%) scale(1.06);
+}
+.gsx-btn:focus-visible{
+  outline:2px solid var(--saffron);
+  outline-offset:3px;
+}
+.gsx-prev{ left:-12px; }
+.gsx-next{ right:-12px; }
+
+@media (max-width:640px){
+  .gsx-prev{ left:4px; }
+  .gsx-next{ right:4px; }
+  .gsx-track figure{ width:min(220px, 66vw); }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .gsx-track{ scroll-behavior:auto; }
+  .gsx-track figure, .gsx-track img, .gsx-btn{ transition:none; }
+}

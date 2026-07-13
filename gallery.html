@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/gallery.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ImageGallery","name":"Vikas Gautam Photo Gallery","about":{"@id":"https://www.vikascollectives.com/#vikas"}}
 </script>
@@ -63,57 +64,98 @@
     <div class="wrap">
       <span class="eyebrow">On Stage</span>
       <h2>Live Performances</h2>
-      <div class="gallery-grid">
-        <figure>
-          <img src="assets/vikas-gautam-saxophonist-delhi.jpg" alt="Vikas Gautam with his saxophone at a live indoor event" loading="lazy">
-          <figcaption>Live at a gala evening</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/vikas-gautam-alto-saxophone-portrait.jpg" alt="Vikas Gautam in a tuxedo with his alto saxophone at a formal evening event" loading="lazy">
-          <figcaption>Formal evening performance</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/vikas-gautam-live-saxophone-show.jpg" alt="Vikas Gautam playing tenor saxophone at an outdoor evening show" loading="lazy">
-          <figcaption>Open-air show</figcaption>
-        </figure>
+      <div class="gsx-wrap gsx-at-start">
+        <button class="gsx-btn gsx-prev" type="button" aria-label="Scroll performances left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="gsx-track" role="region" aria-label="Live performance photos, scroll horizontally">
+          <figure>
+            <img src="assets/vikas-gautam-saxophonist-delhi.jpg" alt="Vikas Gautam with his saxophone at a live indoor event" loading="lazy" decoding="async">
+            <figcaption>Live at a gala evening</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/vikas-gautam-alto-saxophone-portrait.jpg" alt="Vikas Gautam in a tuxedo with his alto saxophone at a formal evening event" loading="lazy" decoding="async">
+            <figcaption>Formal evening performance</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/vikas-gautam-live-saxophone-show.jpg" alt="Vikas Gautam playing tenor saxophone at an outdoor evening show" loading="lazy" decoding="async">
+            <figcaption>Open-air show</figcaption>
+          </figure>
+          <!-- Add more performance photos here using the same figure pattern -->
+        </div>
+        <button class="gsx-btn gsx-next" type="button" aria-label="Scroll performances right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
 
       <span class="eyebrow" style="margin-top:3.5rem">With the Stars</span>
       <h2>Celebrity Moments</h2>
-      <p class="lead">Photographs with celebrities and dignitaries from three decades of shows - being added soon.</p>
+      <p class="lead">Photographs with celebrities and dignitaries from three decades of shows.</p>
       <!-- ====================================================================
-        HOW TO ADD YOUR 50+ CELEBRITY PHOTOS:
+        HOW TO ADD YOUR 150+ CELEBRITY PHOTOS:
         1. Copy each photo into the /assets/gallery/ folder.
-           Use lowercase, descriptive filenames, e.g.:
-           vikas-gautam-with-CELEBRITYNAME.jpg
-        2. Copy one <figure> block below for each photo, update the src,
-           the alt text (important for SEO) and the caption.
-        3. Delete the placeholder <figure> blocks when done.
+           Use lowercase, descriptive filenames (important for SEO), e.g.:
+           vikas-gautam-with-celebrityname.jpg
+        2. Copy one <figure> block from the template at the bottom of this
+           track, update the src, the alt text and the caption, and paste it
+           anywhere inside the .gsx-track below.
+        3. The scroller handles any number of photos, 150 or more.
+        NOTE: For photos 486-502 and the WhatsApp image below, please update
+        each alt text and caption with the actual celebrity name, and ideally
+        rename the files to vikas-gautam-with-celebrityname.jpg format.
       ==================================================================== -->
-      <div class="gallery-grid">
-        <figure>
-          <img src="assets/gallery/vikas-gautam-with-honey-singh.jpeg" alt="Vikas Gautam with Honey Singh" loading="lazy">
-          <figcaption>With Honey Singh</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/gallery/vikas-gautam-with-mahendra-kapoor.JPG" alt="Vikas Gautam with Mahendra Kapoor Ji" loading="lazy">
-          <figcaption>With Mahendra Kapoor Ji</figcaption>
-        </figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
-        <figure><div class="placeholder"><span class="note-icon">&#9834;</span><span>Celebrity photo<br>coming soon</span></div></figure>
+      <div class="gsx-wrap gsx-at-start">
+        <button class="gsx-btn gsx-prev" type="button" aria-label="Scroll celebrity photos left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="gsx-track" role="region" aria-label="Celebrity photos, scroll horizontally">
+          <figure>
+            <img src="assets/gallery/vikas-gautam-with-honey-singh.jpeg" alt="Vikas Gautam with Honey Singh" loading="lazy" decoding="async">
+            <figcaption>With Honey Singh</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/vikas-gautam-with-mahendra-kapoor.JPG" alt="Vikas Gautam with Mahendra Kapoor Ji" loading="lazy" decoding="async">
+            <figcaption>With Mahendra Kapoor Ji</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/486.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/487.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/489.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/493.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/495.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/496.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/500.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/502.JPG" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/vikas-gautam-with-sunil-shetty.jpeg" alt="Vikas Gautam with a celebrity guest" loading="lazy" decoding="async">
+            <figcaption>Celebrity moment</figcaption>
+          </figure>
+          <!-- Template for a new photo (copy, edit, repeat):
+          <figure>
+            <img src="assets/gallery/vikas-gautam-with-celebrity-name.jpg" alt="Vikas Gautam with [Celebrity Name] at [event]" loading="lazy" decoding="async">
+            <figcaption>With [Celebrity Name]</figcaption>
+          </figure>
+          -->
+        </div>
+        <button class="gsx-btn gsx-next" type="button" aria-label="Scroll celebrity photos right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
       </div>
-      <!-- Template for a real photo (copy, edit, repeat):
-      <figure>
-        <img src="assets/gallery/vikas-gautam-with-celebrity-name.jpg" alt="Vikas Gautam with [Celebrity Name] at [event]" loading="lazy">
-        <figcaption>With [Celebrity Name]</figcaption>
-      </figure>
-      -->
     </div>
   </section>
 
@@ -177,5 +219,6 @@
   </div>
 </footer>
 <script src="assets/reveal.js" defer></script>
+<script src="assets/gallery.js" defer></script>
 </body>
 </html>
