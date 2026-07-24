@@ -1,4 +1,22 @@
+# ----------------------------------------------------------------------
+# VIKAS COLLECTIVES MASTER SEO SERVER CONFIGURATION
+# ----------------------------------------------------------------------
+
 RewriteEngine On
+
+# 1. FORCE SECURE HTTPS AND WWW REDIRECT (Stops split indexing)
+RewriteCond %{HTTP_HOST} ^vikascollectives\.com [NC]
+RewriteRule ^(.*)$ https://vikascollectives.com [L,R=301]
+
+# 2. HIDE THE .HTML EXTENSION FROM THE ADDRESS BAR (Creates clean URLs)
+# If a user requests a URL without an extension, serve the .html file internally
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
+
+# If a user tries to manually type .html at the end, redirect them to the clean URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html\ HTTP/
+RewriteRule ^([^\ ]+)\.html$ https://vikascollectives.com [R=301,L]
+
+# 3. CUSTOM 404 ERROR PAGE HANDLING (Keeps lost users on your website)
+# ErrorDocument 404 /404.html
