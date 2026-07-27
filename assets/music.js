@@ -24,7 +24,18 @@
   'use strict';
 
   var TRACKS = [
-    'assets/music/track-01.mp3'
+    'assets/music/track-01.mp3',
+    'assets/music/track-02.mp3',
+    'assets/music/track-03.mp3',
+    'assets/music/track-04.mp3',
+    'assets/music/track-05.mp3',
+    'assets/music/track-06.mp3',
+    'assets/music/track-07.mp3',
+    'assets/music/track-08.mp3',
+    'assets/music/track-09.mp3',
+    'assets/music/track-10.mp3',
+    'assets/music/track-11.mp3',
+    'assets/music/track-12.mp3'  
   ];
   var VOLUME = 0.35;          /* 0.0 to 1.0 — background level */
   var KEY_TRACK = 'vc-music-track';   /* this session's track          */
