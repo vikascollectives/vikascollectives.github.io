@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Client Testimonials - Vikas Gautam, Saxophonist in New Delhi</title>
-<meta name="description" content="Reviews and appreciation for saxophonist Vikas Gautam from the US Embassy New Delhi, corporate leaders, event companies and saxophone students across Delhi NCR.">
+<meta name="description" content="Video testimonials and signed appreciation letters for saxophonist Vikas Gautam from the US Embassy New Delhi, corporate leaders, event companies and saxophone students across Delhi NCR.">
 <link rel="canonical" href="https://www.vikascollectives.com/testimonials.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Client Testimonials - Vikas Gautam, Saxophonist">
@@ -17,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/music.css">
+<link rel="stylesheet" href="assets/testimonials.css">
 <!-- NOTE: Replace the placeholder reviewBody text below with the exact wording from your original testimonial letters. -->
 <script type="application/ld+json">
 {
@@ -89,7 +90,40 @@
   </div>
   <div class="wave" aria-hidden="true"><span class="note-divider"><span class="line"></span><span class="notes"><span>&#9834;</span><span>&#9835;</span><span>&#9834;</span></span><span class="line"></span></span></div>
 
-  <section class="block alt">
+  <!-- Section 1: Featured video + thumbnail strip -->
+  <section class="block alt" id="videos">
+    <div class="wrap">
+      <span class="eyebrow">Hear It From Them</span>
+      <h2>Video Testimonials</h2>
+      <p>Clients and students share their experience in their own voice. Press play, or pick any video from the strip below.</p>
+
+      <div class="tst-hero" id="tstHero">
+        <div class="stage"></div>
+        <button class="tst-hero-play" aria-label="Play featured video testimonial"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="tst-hero-meta"></div>
+      </div>
+
+      <div class="tst-strip-wrap">
+        <button class="tst-strip-nav tst-strip-prev" aria-label="Scroll videos left">&#10094;</button>
+        <div class="tst-strip" id="tstStrip" aria-label="All video testimonials"></div>
+        <button class="tst-strip-nav tst-strip-next" aria-label="Scroll videos right">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Signed letters with category filters -->
+  <section class="block" id="letters">
+    <div class="wrap">
+      <span class="eyebrow">On Record</span>
+      <h2>The Letters</h2>
+      <p>Original letters of appreciation, signed by clients and institutions. Filter by category and click any letter to read it in full.</p>
+      <div class="tst-chips" id="tstChips" role="group" aria-label="Filter letters by category"></div>
+      <div class="tst-letter-grid" id="tstLetterGrid"></div>
+    </div>
+  </section>
+
+  <!-- Section 3: Written words -->
+  <section class="block alt" id="words">
     <div class="wrap">
       <span class="eyebrow">Performance Clients</span>
       <h2>Events &amp; Institutions</h2>
@@ -240,6 +274,17 @@
       </div>
     </div>
   </section>
+
+  <!-- Lightbox for reading letters full size -->
+  <div class="tst-lightbox" id="tstLightbox" role="dialog" aria-modal="true" aria-label="Letter viewer">
+    <div class="tst-lb-body">
+      <button class="tst-lb-close" aria-label="Close viewer">&#10005;</button>
+      <button class="tst-lb-nav tst-lb-prev" aria-label="Previous letter" hidden>&#10094;</button>
+      <div class="frame"></div>
+      <button class="tst-lb-nav tst-lb-next" aria-label="Next letter" hidden>&#10095;</button>
+      <div class="tst-lb-caption"></div>
+    </div>
+  </div>
 </main>
 
 <footer class="site">
@@ -296,5 +341,6 @@
 </footer>
 <script src="assets/reveal.js" defer></script>
 <script src="assets/music.js" defer></script>
+<script src="assets/testimonials.js" defer></script>
 </body>
 </html>
